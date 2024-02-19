@@ -6,7 +6,7 @@ from type import Question, User
 
 
 def add_question_to_firestore(question: Question, db):
-    db.collection("questions").document(str(question.question_id)).set(asdict(question))
+    db.collection("questions").document(str(question.questionId)).set(asdict(question))
 
 
 # データを Firestore に追加する関数

@@ -7,7 +7,7 @@ from type import Question
 db = get_db()
 
 
-for i in range(1, 11):
+for i in range(1, 21):
     question = Question(
         questionId=i,
         title="インターネット利用率",

@@ -1,4 +1,5 @@
 from dataclasses import dataclass
+from datetime import datetime
 
 from dataclasses_json import dataclass_json
 
@@ -16,4 +17,6 @@ class Question:
 class User:
     id: str
     name: str
-    questionIdList: list[int]
+    questionDict: dict
+    created_at: datetime
+    answer: list[dict] = None

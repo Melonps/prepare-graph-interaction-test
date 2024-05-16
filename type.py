@@ -17,6 +17,7 @@ class Question:
 class User:
     id: str
     name: str
-    questionDict: dict
+    questionDictName: str
+    questionIdList: list[str]
     created_at: datetime
     answer: list[dict] = None

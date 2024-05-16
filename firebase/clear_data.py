@@ -1,9 +1,8 @@
-import streamlit as st
 from google.cloud import firestore
 
 
-def delete_all_questions(db: firestore.Client):
-    questions_ref = db.collection("questions")
+def delete_all_questions(db: firestore.Client, collection_name: str):
+    questions_ref = db.collection(collection_name)
     questions = questions_ref.get()
 
     if questions:

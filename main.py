@@ -11,7 +11,7 @@ for i in range(1, 21):
     question = Question(
         questionId=i,
         title="インターネット利用率",
-        description="これから説明するグラフは都道府県別のインターネット利用率に関するもので、",
+        description="これから説明するグラフは都道府県別のインターネット利用率に",
         labels=["東京", "大阪", "北海道", "沖縄"],
         trueValues=[53, 50, 49, 48],
     )

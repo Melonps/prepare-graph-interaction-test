@@ -1,6 +1,7 @@
 import argparse
 import random
 
+random.seed(42)
 
 def add_random_list(current_list: list):
     current_list = current_list + current_list
@@ -17,19 +18,19 @@ def get_question_id_list():
     for group_num in result_group_list:
 
         if group_num == "yomiage":
-            val = 9 * 100 - 1
+            val = 9 * 100
             next_val = 10 * 100 - 1
         else:
-            val = (group_num - 2) * 100 - 1
+            val = (group_num - 2) * 100
             next_val = (group_num - 1) * 100 - 1
         index = random.randint(val, next_val)
-        question_id_list.append(index)
+        question_id_list.append(str(index))
     print("label: ", question_id_list)
     return question_id_list
 
 
 if __name__ == "__main__":
-    random.seed(42)
+
     parser = argparse.ArgumentParser(description="質問データを処理します。")
     args = parser.parse_args()
     get_question_id_list()
